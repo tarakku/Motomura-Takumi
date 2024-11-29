@@ -1,14 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\IndexController;
 use App\Http\Controllers\ImageUploadController;
 use App\Http\Controllers\BbsController;
 use App\Http\Controllers\InfoController;
 
-Route::get('/', [PostController::class, 'index'])->name('home');
+Route::get('/', [IndexController::class, 'index'])->name('home');
 
+//お知らせ画面表示
 Route::get('/info', [InfoController::class, 'info']);
+
 // 画像アップロードフォーム表示
 Route::get('/upload', function () { return view('upload'); });
 
