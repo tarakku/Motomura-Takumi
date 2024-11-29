@@ -9,7 +9,7 @@ use App\Http\Controllers\InfoController;
 Route::get('/', [IndexController::class, 'index'])->name('home');
 
 //お知らせ画面表示
-Route::get('/info', [InfoController::class, 'info']);
+Route::get('/info', [InfoController::class, 'info'])->name('info');
 
 // 画像アップロードフォーム表示
 Route::get('/upload', function () { return view('upload'); });
